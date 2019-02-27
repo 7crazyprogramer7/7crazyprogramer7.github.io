@@ -100,7 +100,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-02-27</span>
-            <span class="time">19:32:21</span>
+            <span class="time">19:37:21</span>
           </span>
           
         </div>
@@ -116,14 +116,10 @@
 <h5 id="2-原因是mybatis-cfg-xml配置文件缺少了对Mapper-xml的引用加上"><a href="#2-原因是mybatis-cfg-xml配置文件缺少了对Mapper-xml的引用加上" class="headerlink" title="2. 原因是mybatis.cfg.xml配置文件缺少了对Mapper.xml的引用加上"></a>2. 原因是mybatis.cfg.xml配置文件缺少了对Mapper.xml的引用加上</h5><blockquote>
 <p><code>&lt;mapper resource=&quot;cn/cq/mapper/SchoolCardMapper.xml&quot;/&gt;</code></p>
 </blockquote>
-<p>#####3. mapper.xml文件名和所写的接口名称不相同</p>
-<p>#####4. 接口中没有此方法</p>
-<p>#####5. 若使用 </p>
-<blockquote>
+<h5 id="3-mapper-xml文件名和所写的接口名称不相同"><a href="#3-mapper-xml文件名和所写的接口名称不相同" class="headerlink" title="3. mapper.xml文件名和所写的接口名称不相同"></a>3. mapper.xml文件名和所写的接口名称不相同</h5><h5 id="4-接口中没有此方法"><a href="#4-接口中没有此方法" class="headerlink" title="4. 接口中没有此方法"></a>4. 接口中没有此方法</h5><h5 id="5-若使用"><a href="#5-若使用" class="headerlink" title="5. 若使用"></a>5. 若使用</h5><blockquote>
 <p><code>&lt;package name=&quot;cn.cq.mapper&quot;/&gt;</code><br>一定在mapper包下加<br><img src="/2019/02/27/mapperd/mapperd.PNG" alt="mapper"><br>此图中的shoolcardmapper.java文件</p>
 </blockquote>
-<p>#####6. 或者直接用</p>
-<blockquote>
+<h5 id="6-或者直接用"><a href="#6-或者直接用" class="headerlink" title="6. 或者直接用"></a>6. 或者直接用</h5><blockquote>
 <p><code>&lt;mapper resource=&quot;cn/cq/mapper/StudentMapper.xml&quot;/&gt;
          &lt;mapper resource=&quot;cn/cq/mapper/SchoolCardMapper.xml&quot;/&gt;</code></p>
 </blockquote>
