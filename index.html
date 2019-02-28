@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/28/BeanCreationException/" itemprop="url">mybatis��spring�����Ǳ���ʹ�õ��µ�classnotfound��org.springframework.beans.factory.BeanCreationExceptio������</a></h1>
+                <a class="post-title-link" href="/2019/02/28/BeanCreationException/" itemprop="url">mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationExceptio问题解决</a></h1>
         
 
         <div class="post-meta">
@@ -300,17 +300,17 @@
       
         
           
-            <h3 id="mybatis��spring�����DZ���ʹ�o��µ�classnotfound��org-springframework-beans-factory-BeanCreationExceptio������"><a href="#mybatis��spring�����DZ���ʹ�o��µ�classnotfound��org-springframework-beans-factory-BeanCreationExceptio������" class="headerlink" title="mybatis��spring�����Ǳ���ʹ�õ��µ�classnotfound��org.springframework.beans.factory.BeanCreationExceptio������"></a>mybatis��spring�����Ǳ���ʹ�õ��µ�classnotfound��org.springframework.beans.factory.BeanCreationExceptio������</h3><hr>
-<h5 id="1-�����ռ�uд�Ի�o�����ʹ��mapper����"><a href="#1-�����ռ�uд�Ի�o�����ʹ��mapper����" class="headerlink" title="1. �����ռ�ûд�Ի�ȫ�����ʹ��mapper����"></a>1. �����ռ�ûд�Ի�ȫ�����ʹ��mapper����</h5><blockquote>
+            <h3 id="mybatis与spring整合是别名使用导致的classnotfound或org-springframework-beans-factory-BeanCreationExceptio问题解决"><a href="#mybatis与spring整合是别名使用导致的classnotfound或org-springframework-beans-factory-BeanCreationExceptio问题解决" class="headerlink" title="mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationExceptio问题解决"></a>mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationExceptio问题解决</h3><hr>
+<h5 id="1-命名空间没写对或不全，如果使用mapper，则"><a href="#1-命名空间没写对或不全，如果使用mapper，则" class="headerlink" title="1. 命名空间没写对或不全，如果使用mapper，则"></a>1. 命名空间没写对或不全，如果使用mapper，则</h5><blockquote>
 <p><code>&lt;mapper namespace=&quot;com.sitech.mapper.StudentMapper&quot;&gt;</code></p>
 </blockquote>
-<h5 id="�����ռ�Ҫo"><a href="#�����ռ�Ҫo" class="headerlink" title="�����ռ�Ҫȫ"></a>�����ռ�Ҫȫ</h5><h5 id="2-��mapper-xml�l��е�resultType��kֵҪ��������"><a href="#2-��mapper-xml�l��е�resultType��kֵҪ��������" class="headerlink" title="2. ��mapper.xml�ļ��е�resultType��ǩֵҪ��������"></a>2. ��mapper.xml�ļ��е�resultType��ǩֵҪ��������</h5><blockquote>
+<h5 id="命名空间要全"><a href="#命名空间要全" class="headerlink" title="命名空间要全"></a>命名空间要全</h5><h5 id="2-在mapper-xml文件中的resultType标签值要完整包名"><a href="#2-在mapper-xml文件中的resultType标签值要完整包名" class="headerlink" title="2. 在mapper.xml文件中的resultType标签值要完整包名"></a>2. 在mapper.xml文件中的resultType标签值要完整包名</h5><blockquote>
 <p><code>&lt;select id=&quot;checkmessage&quot; resultType=&quot;cn.cq.pojo.Student&quot;&gt;</code></p>
 </blockquote>
-<h5 id="3-������sqlsessionfactory��bean�н�һ��property��k"><a href="#3-������sqlsessionfactory��bean�н�һ��property��k" class="headerlink" title="3. ������sqlsessionfactory��bean�н�һ��property��ǩ"></a>3. ������sqlsessionfactory��bean�н�һ��property��ǩ</h5><blockquote>
+<h5 id="3-在配置sqlsessionfactory的bean中交一个property标签"><a href="#3-在配置sqlsessionfactory的bean中交一个property标签" class="headerlink" title="3. 在配置sqlsessionfactory的bean中交一个property标签"></a>3. 在配置sqlsessionfactory的bean中交一个property标签</h5><blockquote>
 <p><code>&lt;property name=&quot;typeAliasesPackage&quot; value=&quot;cn.cq.pojo&quot;&gt;&lt;/property&gt;</code></p>
 </blockquote>
-<h5 id="������Ϊpojo�����е��������˱�������Ϊ����"><a href="#������Ϊpojo�����е��������˱�������Ϊ����" class="headerlink" title="������Ϊpojo�����е��������˱�������Ϊ����"></a>������Ϊpojo�����е��������˱�������Ϊ����</h5>
+<h5 id="这样就为pojo下所有的类配置了别名，即为类名"><a href="#这样就为pojo下所有的类配置了别名，即为类名" class="headerlink" title="这样就为pojo下所有的类配置了别名，即为类名"></a>这样就为pojo下所有的类配置了别名，即为类名</h5>
           
         
       
