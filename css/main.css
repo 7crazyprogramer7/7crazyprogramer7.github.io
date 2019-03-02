@@ -1826,7 +1826,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3e0a53;
+  background: #ee0aff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2995,15 +2995,5 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/image");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-}
-.main-inner {
-  margin-top: 60px;
-  padding: 60px 60px 60px 60px;
-  background: #fff;
-  opacity: 0.8;
-  min-height: 500px;
+  background: url("/images/hai.jpg");
 }
