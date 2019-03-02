@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="title: spring自动注入spring 的自动注入1.  autowire标签（在spring容器中找）、 default表示不自动注入 buName表示找与要注入的对象名相同的bean的id byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一） constructor表示用构造方法注入底层用byName（构造方法的参数对象名与bean的id相同">
+<meta name="description" content="spring 的自动注入1.  autowire标签（在spring容器中找）、 default表示不自动注入 buName表示找与要注入的对象名相同的bean的id byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一） constructor表示用构造方法注入底层用byName（构造方法的参数对象名与bean的id相同） 在beans中加default-a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="One Piece">
+<meta property="og:title" content="spring自动注入">
 <meta property="og:url" content="http://yoursite.com/2019/03/02/zhuru/index.html">
 <meta property="og:site_name" content="One Piece">
-<meta property="og:description" content="title: spring自动注入spring 的自动注入1.  autowire标签（在spring容器中找）、 default表示不自动注入 buName表示找与要注入的对象名相同的bean的id byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一） constructor表示用构造方法注入底层用byName（构造方法的参数对象名与bean的id相同">
+<meta property="og:description" content="spring 的自动注入1.  autowire标签（在spring容器中找）、 default表示不自动注入 buName表示找与要注入的对象名相同的bean的id byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一） constructor表示用构造方法注入底层用byName（构造方法的参数对象名与bean的id相同） 在beans中加default-a">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/02/zhuru/db.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/03/02/zhuru/db.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/03/02/zhuru/data.PNG">
-<meta property="og:updated_time" content="2019-03-02T04:15:44.712Z">
+<meta property="og:updated_time" content="2019-03-02T04:21:19.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="One Piece">
-<meta name="twitter:description" content="title: spring自动注入spring 的自动注入1.  autowire标签（在spring容器中找）、 default表示不自动注入 buName表示找与要注入的对象名相同的bean的id byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一） constructor表示用构造方法注入底层用byName（构造方法的参数对象名与bean的id相同">
+<meta name="twitter:title" content="spring自动注入">
+<meta name="twitter:description" content="spring 的自动注入1.  autowire标签（在spring容器中找）、 default表示不自动注入 buName表示找与要注入的对象名相同的bean的id byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一） constructor表示用构造方法注入底层用byName（构造方法的参数对象名与bean的id相同） 在beans中加default-a">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/02/zhuru/db.PNG">
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title> | One Piece</title>
+  <title>spring自动注入 | One Piece</title>
   
 
 
@@ -253,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">spring自动注入</h1>
         
 
         <div class="post-meta">
@@ -303,8 +303,7 @@
       
 
       
-        <hr>
-<h2 id="title-spring自动注入"><a href="#title-spring自动注入" class="headerlink" title=" title: spring自动注入"></a> title: spring自动注入</h2><h3 id="spring-的自动注入"><a href="#spring-的自动注入" class="headerlink" title="spring 的自动注入"></a>spring 的自动注入</h3><h5 id="1-autowire标签（在spring容器中找）、"><a href="#1-autowire标签（在spring容器中找）、" class="headerlink" title="1.  autowire标签（在spring容器中找）、"></a>1.  autowire标签（在spring容器中找）、</h5><ul>
+        <h3 id="spring-的自动注入"><a href="#spring-的自动注入" class="headerlink" title="spring 的自动注入"></a>spring 的自动注入</h3><h5 id="1-autowire标签（在spring容器中找）、"><a href="#1-autowire标签（在spring容器中找）、" class="headerlink" title="1.  autowire标签（在spring容器中找）、"></a>1.  autowire标签（在spring容器中找）、</h5><ul>
 <li>default表示不自动注入</li>
 <li>buName表示找与要注入的对象名相同的bean的id</li>
 <li>byType表示找与要注入的对象相同的bean的class类型（注意在使用时bean应唯一）</li>
@@ -324,14 +323,17 @@
 </ul>
 </li>
 <li>原因及其解释<ul>
-<li>由于 <code>default-autowire=&quot;byName&quot;</code>的级别十分高，高于属性文件<br><img src="/2019/03/02/zhuru/db.PNG" alt="zhuru">的加载级别<br>在扫描时，当扫描器到<code>&lt;bean class=&quot;org.mybatis.spring.mapper.MapperScanner
-Configurer&quot;&gt;</code><br>时，若sqlsessionfactory的bean的id值是sqlsessionfactory，由于自动注入会一层层向上实例化，到达<br><img src="/2019/03/02/zhuru/data.PNG" alt="data"><br>时由于属性文件未加载而报错<br>当然若不有byName自动注入，用<code>&lt;property name=&quot;sqlSessionFactory&quot; ref=&quot;factory&quot;&gt;&lt;/property&gt;</code>ref的注入形式同样有以上问题，即属性文件未加载<br>改用<code>&lt;property name=&quot;sqlSessionFactoryBeanName&quot; value=&quot;factory&quot;&gt;&lt;/property&gt;</code>加载时实例化sqlsessionfactory时会等待dataresource实例化完成，则不报错。</li>
+<li>由于 <code>default-autowire=&quot;byName&quot;</code>的级别十分高，高于属性文件<br><img src="/2019/03/02/zhuru/db.PNG" alt="zhuru">的加载级别</li>
 </ul>
 </li>
 </ul>
 </blockquote>
 </li>
 </ul>
+<blockquote>
+<p> 在扫描时，当扫描器到<code>&lt;bean class=&quot;org.mybatis.spring.mapper.MapperScanner
+ Configurer&quot;&gt;</code><br> 时，若sqlsessionfactory的bean的id值是sqlsessionfactory，由于自动注入会一层层向上实例化，到达<br> <img src="/2019/03/02/zhuru/data.PNG" alt="data"><br> 时由于属性文件未加载而报错<br> 当然若不有byName自动注入，用<code>&lt;property name=&quot;sqlSessionFactory&quot; ref=&quot;factory&quot;&gt;&lt;/property&gt;</code>ref的注入形式同样有以上问题，即属性文件未加载<br> 改用<code>&lt;property name=&quot;sqlSessionFactoryBeanName&quot; value=&quot;factory&quot;&gt;&lt;/property&gt;</code>加载时实例化sqlsessionfactory时会等待dataresource实例化完成，则不报错。</p>
+</blockquote>
 
       
     </div>
@@ -478,7 +480,7 @@ Configurer&quot;&gt;</code><br>时，若sqlsessionfactory的bean的id值是sqlse
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-spring自动注入"><span class="nav-number">1.</span> <span class="nav-text"> title: spring自动注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spring-的自动注入"><span class="nav-number">1.1.</span> <span class="nav-text">spring 的自动注入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-autowire标签（在spring容器中找）、"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">1.  autowire标签（在spring容器中找）、</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-一般不删除sqlSessionFatory的配置信息的原因"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">2.  一般不删除sqlSessionFatory的配置信息的原因</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-spring-自动注入的一个巨坑"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">3. spring 自动注入的一个巨坑</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#spring-的自动注入"><span class="nav-number">1.</span> <span class="nav-text">spring 的自动注入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-autowire标签（在spring容器中找）、"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.  autowire标签（在spring容器中找）、</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-一般不删除sqlSessionFatory的配置信息的原因"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.  一般不删除sqlSessionFatory的配置信息的原因</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-spring-自动注入的一个巨坑"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. spring 自动注入的一个巨坑</span></a></li></ol></li></ol></div>
             
 
           </div>
