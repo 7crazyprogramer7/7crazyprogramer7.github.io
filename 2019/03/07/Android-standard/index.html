@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="android 活动模式的学习,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="1 进入setting–&amp;gt;sdk–&amp;gt;sdk tools 选中install x86 haxm…..2 找到sdk安装目录，进extras–&amp;gt;intel–&amp;gt;…找到install Intel haxm-android.exe,打开3 一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization Technology）这时要进入biso设置4 不同的电脑品牌">
+<meta name="description" content="title:  Android 的四种launchMode（启动模式）：standard ： 既使当a活动处于栈顶时，仍会创建一个新的a活动。  singleTop： 当a活动处于栈顶时，这时再启动a活动时不会再创建新的，但a不在栈顶时会再创建一个新的a活动。  singleTask： 俩个活动在一个任务栈中，先启动a活动（设a活动为main活动），（a活动进栈），在启动b活动（b活动进栈），b">
+<meta name="keywords" content="android 活动模式的学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="处理Android studio的模拟器无hamx问题">
-<meta property="og:url" content="http://yoursite.com/2019/03/06/biso/index.html">
+<meta property="og:title" content="Android standard">
+<meta property="og:url" content="http://yoursite.com/2019/03/07/Android-standard/index.html">
 <meta property="og:site_name" content="One Piece">
-<meta property="og:description" content="1 进入setting–&amp;gt;sdk–&amp;gt;sdk tools 选中install x86 haxm…..2 找到sdk安装目录，进extras–&amp;gt;intel–&amp;gt;…找到install Intel haxm-android.exe,打开3 一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization Technology）这时要进入biso设置4 不同的电脑品牌">
+<meta property="og:description" content="title:  Android 的四种launchMode（启动模式）：standard ： 既使当a活动处于栈顶时，仍会创建一个新的a活动。  singleTop： 当a活动处于栈顶时，这时再启动a活动时不会再创建新的，但a不在栈顶时会再创建一个新的a活动。  singleTask： 俩个活动在一个任务栈中，先启动a活动（设a活动为main活动），（a活动进栈），在启动b活动（b活动进栈），b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-06T08:47:53.434Z">
+<meta property="og:updated_time" content="2019-03-07T08:45:30.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="处理Android studio的模拟器无hamx问题">
-<meta name="twitter:description" content="1 进入setting–&amp;gt;sdk–&amp;gt;sdk tools 选中install x86 haxm…..2 找到sdk安装目录，进extras–&amp;gt;intel–&amp;gt;…找到install Intel haxm-android.exe,打开3 一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization Technology）这时要进入biso设置4 不同的电脑品牌">
+<meta name="twitter:title" content="Android standard">
+<meta name="twitter:description" content="title:  Android 的四种launchMode（启动模式）：standard ： 既使当a活动处于栈顶时，仍会创建一个新的a活动。  singleTop： 当a活动处于栈顶时，这时再启动a活动时不会再创建新的，但a不在栈顶时会再创建一个新的a活动。  singleTask： 俩个活动在一个任务栈中，先启动a活动（设a活动为main活动），（a活动进栈），在启动b活动（b活动进栈），b">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/06/biso/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/07/Android-standard/">
 
 
 
 
 
-  <title>处理Android studio的模拟器无hamx问题 | One Piece</title>
+  <title>Android standard | One Piece</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/biso/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/07/Android-standard/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">处理Android studio的模拟器无hamx问题</h1>
+          <h1 class="post-title" itemprop="name headline">Android standard</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T16:46:26+08:00">
-                2019-03-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-07T16:40:15+08:00">
+                2019-03-07
               </time>
             
 
@@ -319,7 +320,20 @@
       
 
       
-        <h4 id="1-进入setting–-gt-sdk–-gt-sdk-tools-选中install-x86-haxm…"><a href="#1-进入setting–-gt-sdk–-gt-sdk-tools-选中install-x86-haxm…" class="headerlink" title="1 进入setting–&gt;sdk–&gt;sdk tools 选中install x86 haxm….."></a>1 进入setting–&gt;sdk–&gt;sdk tools 选中install x86 haxm…..</h4><h4 id="2-找到sdk安装目录，进extras–-gt-intel–-gt-…找到install-Intel-haxm-android-exe-打开"><a href="#2-找到sdk安装目录，进extras–-gt-intel–-gt-…找到install-Intel-haxm-android-exe-打开" class="headerlink" title="2 找到sdk安装目录，进extras–&gt;intel–&gt;…找到install Intel haxm-android.exe,打开"></a>2 找到sdk安装目录，进extras–&gt;intel–&gt;…找到install Intel haxm-android.exe,打开</h4><h4 id="3-一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization-Technology）这时要进入biso设置"><a href="#3-一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization-Technology）这时要进入biso设置" class="headerlink" title="3 一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization Technology）这时要进入biso设置"></a>3 一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization Technology）这时要进入biso设置</h4><h4 id="4-不同的电脑品牌进入biso的方式不同，进入后找到configuration目录，再找到Intel-Virtualization-Technology-选择Enabled-然后确定（Enter）"><a href="#4-不同的电脑品牌进入biso的方式不同，进入后找到configuration目录，再找到Intel-Virtualization-Technology-选择Enabled-然后确定（Enter）" class="headerlink" title="4 不同的电脑品牌进入biso的方式不同，进入后找到configuration目录，再找到Intel Virtualization Technology,选择Enabled 然后确定（Enter）"></a>4 不同的电脑品牌进入biso的方式不同，进入后找到configuration目录，再找到Intel Virtualization Technology,选择Enabled 然后确定（Enter）</h4><h4 id="5-最后移动到Exit并选择Exit-Saving-changes保存"><a href="#5-最后移动到Exit并选择Exit-Saving-changes保存" class="headerlink" title="5 最后移动到Exit并选择Exit Saving changes保存"></a>5 最后移动到Exit并选择Exit Saving changes保存</h4><h4 id="6-重新运行install-Intel-haxm-android-exe，这次应该可以安装成功，然后在Android-studio中可开启模拟器的服务。"><a href="#6-重新运行install-Intel-haxm-android-exe，这次应该可以安装成功，然后在Android-studio中可开启模拟器的服务。" class="headerlink" title="6 重新运行install Intel haxm-android.exe，这次应该可以安装成功，然后在Android studio中可开启模拟器的服务。"></a>6 重新运行install Intel haxm-android.exe，这次应该可以安装成功，然后在Android studio中可开启模拟器的服务。</h4>
+        <hr>
+<h2 id="title-Android-的四种launchMode（启动模式）："><a href="#title-Android-的四种launchMode（启动模式）：" class="headerlink" title="title:  Android 的四种launchMode（启动模式）："></a>title:  Android 的四种launchMode（启动模式）：</h2><h4 id="standard-："><a href="#standard-：" class="headerlink" title="standard ："></a>standard ：</h4><blockquote>
+<p>既使当a活动处于栈顶时，仍会创建一个新的a活动。</p>
+</blockquote>
+<h4 id="singleTop："><a href="#singleTop：" class="headerlink" title="singleTop："></a>singleTop：</h4><blockquote>
+<p>当a活动处于栈顶时，这时再启动a活动时不会再创建新的，但a不在栈顶时会再创建一个新的a活动。</p>
+</blockquote>
+<h4 id="singleTask："><a href="#singleTask：" class="headerlink" title="singleTask："></a>singleTask：</h4><blockquote>
+<p>俩个活动在一个任务栈中，先启动a活动（设a活动为main活动），（a活动进栈），在启动b活动（b活动进栈），b在a上，此时在启动a活动，b活动会被弹出，任务栈中只有a活动一个，若此时按back键会直接退出程序（app）</p>
+</blockquote>
+<h4 id="singleInstance："><a href="#singleInstance：" class="headerlink" title="singleInstance："></a>singleInstance：</h4><blockquote>
+<p>两个活动在不同的task stack 中，且每个栈中只包括一个活动</p>
+</blockquote>
+
       
     </div>
     
@@ -334,6 +348,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/android-活动模式的学习/" rel="tag"># android 活动模式的学习</a>
+          
+        </div>
+      
 
       
       
@@ -343,8 +363,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/02/zhuru/" rel="next" title="spring自动注入">
-                <i class="fa fa-chevron-left"></i> spring自动注入
+              <a href="/2019/03/06/biso/" rel="next" title="处理Android studio的模拟器无hamx问题">
+                <i class="fa fa-chevron-left"></i> 处理Android studio的模拟器无hamx问题
               </a>
             
           </div>
@@ -352,10 +372,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/07/Android-standard/" rel="prev" title="Android standard">
-                Android standard <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -495,7 +511,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-进入setting–-gt-sdk–-gt-sdk-tools-选中install-x86-haxm…"><span class="nav-number">1.</span> <span class="nav-text">1 进入setting–&gt;sdk–&gt;sdk tools 选中install x86 haxm…..</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-找到sdk安装目录，进extras–-gt-intel–-gt-…找到install-Intel-haxm-android-exe-打开"><span class="nav-number">2.</span> <span class="nav-text">2 找到sdk安装目录，进extras–&gt;intel–&gt;…找到install Intel haxm-android.exe,打开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization-Technology）这时要进入biso设置"><span class="nav-number">3.</span> <span class="nav-text">3 一般有提示说要开启VT服务（英特尔的硬件辅助虚拟化技术Virtualization Technology）这时要进入biso设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-不同的电脑品牌进入biso的方式不同，进入后找到configuration目录，再找到Intel-Virtualization-Technology-选择Enabled-然后确定（Enter）"><span class="nav-number">4.</span> <span class="nav-text">4 不同的电脑品牌进入biso的方式不同，进入后找到configuration目录，再找到Intel Virtualization Technology,选择Enabled 然后确定（Enter）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-最后移动到Exit并选择Exit-Saving-changes保存"><span class="nav-number">5.</span> <span class="nav-text">5 最后移动到Exit并选择Exit Saving changes保存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-重新运行install-Intel-haxm-android-exe，这次应该可以安装成功，然后在Android-studio中可开启模拟器的服务。"><span class="nav-number">6.</span> <span class="nav-text">6 重新运行install Intel haxm-android.exe，这次应该可以安装成功，然后在Android studio中可开启模拟器的服务。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-Android-的四种launchMode（启动模式）："><span class="nav-number">1.</span> <span class="nav-text">title:  Android 的四种launchMode（启动模式）：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#standard-："><span class="nav-number">1.0.1.</span> <span class="nav-text">standard ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#singleTop："><span class="nav-number">1.0.2.</span> <span class="nav-text">singleTop：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#singleTask："><span class="nav-number">1.0.3.</span> <span class="nav-text">singleTask：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#singleInstance："><span class="nav-number">1.0.4.</span> <span class="nav-text">singleInstance：</span></a></li></ol></li></ol></div>
             
 
           </div>
