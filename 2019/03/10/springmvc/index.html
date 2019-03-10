@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="title: springmvc四组件date: 2019-03-10 11:53:52 tags: springmvc四组件学习1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;">
+<meta name="description" content="1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;         &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="One Piece">
+<meta property="og:title" content="springmvc的四个组件">
 <meta property="og:url" content="http://yoursite.com/2019/03/10/springmvc/index.html">
 <meta property="og:site_name" content="One Piece">
-<meta property="og:description" content="title: springmvc四组件date: 2019-03-10 11:53:52 tags: springmvc四组件学习1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;">
+<meta property="og:description" content="1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;         &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T03:58:30.872Z">
+<meta property="og:updated_time" content="2019-03-10T04:02:20.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="One Piece">
-<meta name="twitter:description" content="title: springmvc四组件date: 2019-03-10 11:53:52 tags: springmvc四组件学习1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;">
+<meta name="twitter:title" content="springmvc的四个组件">
+<meta name="twitter:description" content="1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;         &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title> | One Piece</title>
+  <title>springmvc的四个组件 | One Piece</title>
   
 
 
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">springmvc的四个组件</h1>
         
 
         <div class="post-meta">
@@ -319,43 +319,45 @@
       
 
       
-        <hr>
-<p>title: springmvc四组件<br>date: 2019-03-10 11:53:52</p>
-<h2 id="tags-springmvc四组件学习"><a href="#tags-springmvc四组件学习" class="headerlink" title="tags: springmvc四组件学习"></a>tags: springmvc四组件学习</h2><h4 id="1-DispatcherServlet-前端控制器"><a href="#1-DispatcherServlet-前端控制器" class="headerlink" title="1 DispatcherServlet:前端控制器"></a>1 DispatcherServlet:前端控制器</h4><h5 id="在web-xml中通过以下方式配置"><a href="#在web-xml中通过以下方式配置" class="headerlink" title="在web.xml中通过以下方式配置"></a>在web.xml中通过以下方式配置</h5><blockquote>
+        <h4 id="1-DispatcherServlet-前端控制器"><a href="#1-DispatcherServlet-前端控制器" class="headerlink" title="1 DispatcherServlet:前端控制器"></a>1 DispatcherServlet:前端控制器</h4><h5 id="在web-xml中通过以下方式配置"><a href="#在web-xml中通过以下方式配置" class="headerlink" title="在web.xml中通过以下方式配置"></a>在web.xml中通过以下方式配置</h5><blockquote>
 <p><code>&lt;servlet&gt;
         &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
-                &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-                        &lt;init-param&gt;
-                                    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-                                                &lt;param-value&gt;classpath:springmvc.xml&lt;/param-value&gt;
-                                                        &lt;/init-param&gt;
-                                                                &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-                                                                    &lt;/servlet&gt; 
-                                                                        &lt;servlet-mapping&gt;
-                                                                            &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
-                                                                                &lt;url-pattern&gt;/&lt;/url-pattern&gt;
-                                                                                    &lt;/servlet-mapping&gt;</code></p>
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;classpath:springmvc.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt; 
+    &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;</code></p>
 </blockquote>
-<pre><code>#### 2 HandlerMapping:解析请求，判断要调用那个方法
-##### 在springmvc.xml下配置
-&gt;  `&lt;bean id=&quot;mappering&quot; class=&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;&gt;
+<h4 id="2-HandlerMapping-解析请求，判断要调用那个方法"><a href="#2-HandlerMapping-解析请求，判断要调用那个方法" class="headerlink" title="2 HandlerMapping:解析请求，判断要调用那个方法"></a>2 HandlerMapping:解析请求，判断要调用那个方法</h4><h5 id="在springmvc-xml下配置"><a href="#在springmvc-xml下配置" class="headerlink" title="在springmvc.xml下配置"></a>在springmvc.xml下配置</h5><blockquote>
+<p> <code>&lt;bean id=&quot;mappering&quot; class=&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;&gt;
             &lt;property name=&quot;urlMap&quot;&gt;
-                        &lt;map&gt;
-                                        &lt;entry key=&quot;demo&quot; value-ref=&quot;democon&quot;&gt;&lt;/entry&gt;
-                                                    &lt;/map&gt;
-                                                            &lt;/property&gt;
-                                                                &lt;/bean&gt;`
-                                                            #### 3 HandlerAdepter:调用方法
-                                                            &gt;  `&lt;bean id=&quot;adapter&quot; class=&quot;org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter&quot;&gt;&lt;/bean&gt;`
-                                                            #### 4 ViewResovler:视图解析器，跳转到页面 
-                                                            * ##### 可不配置，使用默认的
-                                                            * ##### 自定义
-                                                            &gt; `&lt;bean id=&quot;viewResolver&quot; class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
-                                                                        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/&quot;&gt;&lt;/property&gt;
-                                                                                &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
-                                                                                    &lt;/bean&gt;`
-                                                                                      * 此处prefix的值为/WEB-INF/是因为jsp文件在WEB-INF下
-</code></pre>
+                &lt;map&gt;
+                    &lt;entry key=&quot;demo&quot; value-ref=&quot;democon&quot;&gt;&lt;/entry&gt;
+                &lt;/map&gt;
+            &lt;/property&gt;
+        &lt;/bean&gt;</code></p>
+</blockquote>
+<h4 id="3-HandlerAdepter-调用方法"><a href="#3-HandlerAdepter-调用方法" class="headerlink" title="3 HandlerAdepter:调用方法"></a>3 HandlerAdepter:调用方法</h4><blockquote>
+<p> <code>&lt;bean id=&quot;adapter&quot; class=&quot;org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter&quot;&gt;&lt;/bean&gt;</code></p>
+</blockquote>
+<h4 id="4-ViewResovler-视图解析器，跳转到页面"><a href="#4-ViewResovler-视图解析器，跳转到页面" class="headerlink" title="4 ViewResovler:视图解析器，跳转到页面"></a>4 ViewResovler:视图解析器，跳转到页面</h4><ul>
+<li><h5 id="可不配置，使用默认的"><a href="#可不配置，使用默认的" class="headerlink" title="可不配置，使用默认的"></a>可不配置，使用默认的</h5></li>
+<li><h5 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h5><blockquote>
+<p>`<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean></p>
+<pre><code>      &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/&quot;&gt;&lt;/property&gt;
+      &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
+  &lt;/bean&gt;`
+* 此处prefix的值为/WEB-INF/是因为jsp文件在WEB-INF下
+</code></pre></blockquote>
+</li>
+</ul>
+
       
     </div>
     
@@ -527,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-springmvc四组件学习"><span class="nav-number">1.</span> <span class="nav-text">tags: springmvc四组件学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-DispatcherServlet-前端控制器"><span class="nav-number">1.0.1.</span> <span class="nav-text">1 DispatcherServlet:前端控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在web-xml中通过以下方式配置"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">在web.xml中通过以下方式配置</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-DispatcherServlet-前端控制器"><span class="nav-number">1.</span> <span class="nav-text">1 DispatcherServlet:前端控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在web-xml中通过以下方式配置"><span class="nav-number">1.1.</span> <span class="nav-text">在web.xml中通过以下方式配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-HandlerMapping-解析请求，判断要调用那个方法"><span class="nav-number">2.</span> <span class="nav-text">2 HandlerMapping:解析请求，判断要调用那个方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在springmvc-xml下配置"><span class="nav-number">2.1.</span> <span class="nav-text">在springmvc.xml下配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-HandlerAdepter-调用方法"><span class="nav-number">3.</span> <span class="nav-text">3 HandlerAdepter:调用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-ViewResovler-视图解析器，跳转到页面"><span class="nav-number">4.</span> <span class="nav-text">4 ViewResovler:视图解析器，跳转到页面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可不配置，使用默认的"><span class="nav-number">4.1.</span> <span class="nav-text">可不配置，使用默认的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义"><span class="nav-number">4.2.</span> <span class="nav-text">自定义</span></a></li></ol></li></ol></div>
             
 
           </div>

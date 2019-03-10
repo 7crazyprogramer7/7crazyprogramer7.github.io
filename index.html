@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/10/springmvc/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/03/10/springmvc/" itemprop="url">springmvc的四个组件</a></h1>
         
 
         <div class="post-meta">
@@ -320,43 +320,45 @@
       
         
           
-            <hr>
-<p>title: springmvc四组件<br>date: 2019-03-10 11:53:52</p>
-<h2 id="tags-springmvc四组件学习"><a href="#tags-springmvc四组件学习" class="headerlink" title="tags: springmvc四组件学习"></a>tags: springmvc四组件学习</h2><h4 id="1-DispatcherServlet-前端控制器"><a href="#1-DispatcherServlet-前端控制器" class="headerlink" title="1 DispatcherServlet:前端控制器"></a>1 DispatcherServlet:前端控制器</h4><h5 id="在web-xml中通过以下方式配置"><a href="#在web-xml中通过以下方式配置" class="headerlink" title="在web.xml中通过以下方式配置"></a>在web.xml中通过以下方式配置</h5><blockquote>
+            <h4 id="1-DispatcherServlet-前端控制器"><a href="#1-DispatcherServlet-前端控制器" class="headerlink" title="1 DispatcherServlet:前端控制器"></a>1 DispatcherServlet:前端控制器</h4><h5 id="在web-xml中通过以下方式配置"><a href="#在web-xml中通过以下方式配置" class="headerlink" title="在web.xml中通过以下方式配置"></a>在web.xml中通过以下方式配置</h5><blockquote>
 <p><code>&lt;servlet&gt;
         &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
-                &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-                        &lt;init-param&gt;
-                                    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-                                                &lt;param-value&gt;classpath:springmvc.xml&lt;/param-value&gt;
-                                                        &lt;/init-param&gt;
-                                                                &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-                                                                    &lt;/servlet&gt; 
-                                                                        &lt;servlet-mapping&gt;
-                                                                            &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
-                                                                                &lt;url-pattern&gt;/&lt;/url-pattern&gt;
-                                                                                    &lt;/servlet-mapping&gt;</code></p>
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;classpath:springmvc.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt; 
+    &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;</code></p>
 </blockquote>
-<pre><code>#### 2 HandlerMapping:解析请求，判断要调用那个方法
-##### 在springmvc.xml下配置
-&gt;  `&lt;bean id=&quot;mappering&quot; class=&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;&gt;
+<h4 id="2-HandlerMapping-解析请求，判断要调用那个方法"><a href="#2-HandlerMapping-解析请求，判断要调用那个方法" class="headerlink" title="2 HandlerMapping:解析请求，判断要调用那个方法"></a>2 HandlerMapping:解析请求，判断要调用那个方法</h4><h5 id="在springmvc-xml下配置"><a href="#在springmvc-xml下配置" class="headerlink" title="在springmvc.xml下配置"></a>在springmvc.xml下配置</h5><blockquote>
+<p> <code>&lt;bean id=&quot;mappering&quot; class=&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;&gt;
             &lt;property name=&quot;urlMap&quot;&gt;
-                        &lt;map&gt;
-                                        &lt;entry key=&quot;demo&quot; value-ref=&quot;democon&quot;&gt;&lt;/entry&gt;
-                                                    &lt;/map&gt;
-                                                            &lt;/property&gt;
-                                                                &lt;/bean&gt;`
-                                                            #### 3 HandlerAdepter:调用方法
-                                                            &gt;  `&lt;bean id=&quot;adapter&quot; class=&quot;org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter&quot;&gt;&lt;/bean&gt;`
-                                                            #### 4 ViewResovler:视图解析器，跳转到页面 
-                                                            * ##### 可不配置，使用默认的
-                                                            * ##### 自定义
-                                                            &gt; `&lt;bean id=&quot;viewResolver&quot; class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
-                                                                        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/&quot;&gt;&lt;/property&gt;
-                                                                                &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
-                                                                                    &lt;/bean&gt;`
-                                                                                      * 此处prefix的值为/WEB-INF/是因为jsp文件在WEB-INF下
-</code></pre>
+                &lt;map&gt;
+                    &lt;entry key=&quot;demo&quot; value-ref=&quot;democon&quot;&gt;&lt;/entry&gt;
+                &lt;/map&gt;
+            &lt;/property&gt;
+        &lt;/bean&gt;</code></p>
+</blockquote>
+<h4 id="3-HandlerAdepter-调用方法"><a href="#3-HandlerAdepter-调用方法" class="headerlink" title="3 HandlerAdepter:调用方法"></a>3 HandlerAdepter:调用方法</h4><blockquote>
+<p> <code>&lt;bean id=&quot;adapter&quot; class=&quot;org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter&quot;&gt;&lt;/bean&gt;</code></p>
+</blockquote>
+<h4 id="4-ViewResovler-视图解析器，跳转到页面"><a href="#4-ViewResovler-视图解析器，跳转到页面" class="headerlink" title="4 ViewResovler:视图解析器，跳转到页面"></a>4 ViewResovler:视图解析器，跳转到页面</h4><ul>
+<li><h5 id="可不配置，使用默认的"><a href="#可不配置，使用默认的" class="headerlink" title="可不配置，使用默认的"></a>可不配置，使用默认的</h5></li>
+<li><h5 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h5><blockquote>
+<p>`<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean></p>
+<pre><code>      &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/&quot;&gt;&lt;/property&gt;
+      &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
+  &lt;/bean&gt;`
+* 此处prefix的值为/WEB-INF/是因为jsp文件在WEB-INF下
+</code></pre></blockquote>
+</li>
+</ul>
+
           
         
       
