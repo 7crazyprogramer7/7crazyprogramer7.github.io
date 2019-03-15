@@ -249,6 +249,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="One Piece">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/24/hexo/" itemprop="url">Hexo学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T15:01:49+08:00">
+                2019-02-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="使用Hexo"><a href="#使用Hexo" class="headerlink" title="使用Hexo"></a>使用Hexo</h2><hr>
+<h3 id="1-hexo的简单使用"><a href="#1-hexo的简单使用" class="headerlink" title="1. hexo的简单使用 "></a><strong>1. hexo的简单使用 </strong></h3><hr>
+<ul>
+<li><h4 id="hexo是什么？"><a href="#hexo是什么？" class="headerlink" title="hexo是什么？"></a>hexo是什么？</h4><blockquote>
+<p>heox  is <strong>A fast, simple &amp; powerful blog framework</strong> ，我们通过hexo搭建的博客然后部署到 github 上 ，别人通过  github 主页可以访问到你搭建的博客。</p>
+</blockquote>
+</li>
+<li><h4 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h4><blockquote>
+<ul>
+<li>首先安装一个  <a href="https://git-scm.com/" target="_blank" rel="noopener">git</a> 和 注册一个 <a href="https://github.com/" target="_blank" rel="noopener">github</a> 账号(可点击此处自行安装)</li>
+<li>然后安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 。（请自行安装，过程很简单）</li>
+</ul>
+</blockquote>
+</li>
+<li><h4 id="安装-Hexo-（注意：以下所要输入的皆为命令行）"><a href="#安装-Hexo-（注意：以下所要输入的皆为命令行）" class="headerlink" title="安装 Hexo （注意：以下所要输入的皆为命令行）"></a>安装 Hexo （注意：以下所要输入的皆为命令行）</h4><blockquote>
+<ol>
+<li>在D盘中（建议在非系统盘）建一个文件夹<ul>
+<li>在文件夹中点击右键，选择git bash here.</li>
+<li>然后输入 <strong>npm install -g hexo-cli</strong> 即可。</li>
+</ul>
+</li>
+<li>再输入<strong>hexo init</strong> 进行初始化，然后输入<strong>hexo install</strong> 安装其他一些可用的文件包。  </li>
+<li>安装 deployer-git 插件：继续输入<strong>npm install hexo-deployer-git –save</strong></li>
+</ol>
+</blockquote>
+</li>
+<li><h4 id="建立GitHub项目"><a href="#建立GitHub项目" class="headerlink" title="建立GitHub项目"></a>建立GitHub项目</h4><blockquote>
+<p>为项目命名，格式为（<strong>用户名 + github.io</strong>）<br><img src="https://github.com/Littlehalo/project/blob/master/hexo&amp;github/QQ%E5%9B%BE%E7%89%8720190204135647.png?raw=true" alt="用户名 + github.io"></p>
+</blockquote>
+</li>
+<li><h4 id="修改-config-yml-文件"><a href="#修改-config-yml-文件" class="headerlink" title="修改_config.yml 文件"></a>修改_config.yml 文件</h4><blockquote>
+<ul>
+<li>在GitHub上复制生成的地址<br><img src="https://github.com/Littlehalo/project/blob/master/hexo&amp;github/QQ%E5%9B%BE%E7%89%8720190204140057.png?raw=true" alt="地址"></li>
+<li>打开_config.yml文件,改deploy下的type后为<strong>git</strong>，repo后为复制的地址，branch后为<strong>manster</strong><br><img src="https://github.com/Littlehalo/project/blob/master/hexo&amp;github/QQ%E5%9B%BE%E7%89%8720190204140644.png?raw=true" alt="文件"></li>
+</ul>
+</blockquote>
+</li>
+<li>再输入<strong>hexo g -d</strong>, 然后在网页上输入<strong>https://你的github用户名.ginhub.io</strong>即可。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -416,7 +574,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -429,7 +587,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
