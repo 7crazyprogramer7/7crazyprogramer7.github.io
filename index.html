@@ -249,6 +249,145 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/22/java-point-reference/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="One Piece">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/22/java-point-reference/" itemprop="url">java的地址引用问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T20:47:23+08:00">
+                2019-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<h5 id="如以下代码"><a href="#如以下代码" class="headerlink" title="如以下代码"></a>如以下代码</h5></blockquote>
+<hr>
+<blockquote>
+<p><code>private static String a = &quot;abc&quot;</code></p>
+</blockquote>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><blockquote>
+<p><code>public String get() {
+        return a; 
+    }</code>  方法返回a;</p>
+</blockquote>
+<h5 id="在另一类的main方法中得到i"><a href="#在另一类的main方法中得到i" class="headerlink" title="在另一类的main方法中得到i"></a>在另一类的main方法中得到i</h5><blockquote>
+<p><code>String i = a.get();
+        i =&quot;abd&quot;;
+        System.out.println(i);
+        System.out.println(System.identityHashCode(i));</code></p>
+</blockquote>
+<h5 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h5><blockquote>
+<p>console中显示i的hashcode()方法和identityHashCode()方法的返回值与a的hashcode()方法和identityHashCode()方法的返回值都分别相等，但<code>System.out.println(i)</code>和<code>System.out.println(a)</code>不同 a为abc 而 i为abd;<br>若identityHashCode（）方法返回对象在内存中的地址，且<code>return a;</code>这条语句是将a 的地址返回给i，又进行了<code>i=&quot;abd&quot;;</code>(String 不可变 i重新赋值abd后应该指向一个堆中新地址)的操作，则i指向abd 则i的identityhashcode()的返回值应与a不同，若相同也是将原来i和a都相同的那个identityhashcode()所代表的内存区域内的值由abc改为abd（但这是不被java允许的，现在假设可以这样），那么再输出a时应也为abd但却为abc ????? </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/15/javazhi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1474,127 +1613,6 @@ System.out.println(person.name);
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/mybatis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/background.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="One Piece">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/24/mybatis/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T17:03:21+08:00">
-                2019-02-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Learn-Mybatis"><a href="#Learn-Mybatis" class="headerlink" title="Learn Mybatis"></a>Learn Mybatis</h3><hr>
-<h5 id="1-导包"><a href="#1-导包" class="headerlink" title="1. 导包"></a>1. 导包</h5><p><img src="/2019/02/24/mybatis/liu.PNG" alt="图片"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1647,7 +1665,7 @@ System.out.println(person.name);
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
