@@ -249,6 +249,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/cisco-luyou/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="One Piece">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/04/cisco-luyou/" itemprop="url">cisco packet 的三个路由的配置方法及注意事项</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-04T00:44:31+08:00">
+                2019-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="1-将模拟器准备好"><a href="#1-将模拟器准备好" class="headerlink" title="1. 将模拟器准备好"></a>1. 将模拟器准备好</h5><blockquote>
+<p><img src="/cisco-luyou/moni.PNG" alt="moniqi"></p>
+</blockquote>
+<h5 id="2-为pc机配置IP-地址，掩码，为路由配置ip-还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）"><a href="#2-为pc机配置IP-地址，掩码，为路由配置ip-还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）" class="headerlink" title="2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）"></a>2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）</h5><ul>
+<li><h6 id="例如上图中，我为route0和route1之间配置的网段为172-16-10-0，而在route1和route2之间的网段为172-16-30-0"><a href="#例如上图中，我为route0和route1之间配置的网段为172-16-10-0，而在route1和route2之间的网段为172-16-30-0" class="headerlink" title="例如上图中，我为route0和route1之间配置的网段为172.16.10.0，而在route1和route2之间的网段为172.16.30.0"></a>例如上图中，我为route0和route1之间配置的网段为<font color="red">172.16.10.0</font>，而在route1和route2之间的网段为<font color="red">172.16.30.0</font></h6><h5 id="3-各pc机，路由，及静态路由的配置命令如下："><a href="#3-各pc机，路由，及静态路由的配置命令如下：" class="headerlink" title="3. 各pc机，路由，及静态路由的配置命令如下："></a>3. 各pc机，路由，及静态路由的配置命令如下：</h5></li>
+<li><h6 id="pc0"><a href="#pc0" class="headerlink" title="pc0"></a>pc0</h6><blockquote>
+<p><img src="/cisco-luyou/pc0.PNG" alt="pc0"></p>
+</blockquote>
+</li>
+<li><h5 id="pc1"><a href="#pc1" class="headerlink" title="pc1"></a>pc1</h5><blockquote>
+<p><img src="/cisco-luyou/pc1.PNG" alt="pc1"></p>
+</blockquote>
+</li>
+<li><h6 id="route0"><a href="#route0" class="headerlink" title="route0"></a>route0</h6><blockquote>
+<p><img src="/cisco-luyou/route0.PNG" alt="route0"></p>
+</blockquote>
+</li>
+<li><h6 id="route1"><a href="#route1" class="headerlink" title="route1"></a>route1</h6><blockquote>
+<p><img src="/cisco-luyou/route1.PNG" alt="route1"></p>
+</blockquote>
+</li>
+<li><h6 id="route2"><a href="#route2" class="headerlink" title="route2"></a>route2</h6><blockquote>
+<p><img src="/cisco-luyou/route2.PNG" alt="route2"></p>
+</blockquote>
+<h5 id="4-完成后如图："><a href="#4-完成后如图：" class="headerlink" title="4. 完成后如图："></a>4. 完成后如图：</h5><blockquote>
+<p><img src="/cisco-luyou/suc.PNG" alt="sucessfully"></p>
+</blockquote>
+</li>
+</ul>
+<h5 id="5-提供一条删除静态路由的命令-格式如下"><a href="#5-提供一条删除静态路由的命令-格式如下" class="headerlink" title="5. 提供一条删除静态路由的命令 (格式如下)"></a>5. 提供一条删除静态路由的命令 (格式如下)</h5><blockquote>
+<p><code>no ip route 192.168.100.0 255.255.255.0 172.168.10.4</code> </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/26/spsringMVC-view/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1480,135 +1631,6 @@ System.out.println(person.name);
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/BeanCreationException/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/background.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="One Piece">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/28/BeanCreationException/" itemprop="url">mybatis与spring整合因别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationException问题解决</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T18:04:27+08:00">
-                2019-02-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="mybatis与spring整合是别名使用导致的classnotfound或org-springframework-beans-factory-BeanCreationException问题解决"><a href="#mybatis与spring整合是别名使用导致的classnotfound或org-springframework-beans-factory-BeanCreationException问题解决" class="headerlink" title="mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationException问题解决"></a>mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationException问题解决</h3><hr>
-<h5 id="1-命名空间没写对或不全，如果使用mapper，则"><a href="#1-命名空间没写对或不全，如果使用mapper，则" class="headerlink" title="1. 命名空间没写对或不全，如果使用mapper，则"></a>1. 命名空间没写对或不全，如果使用mapper，则</h5><blockquote>
-<p><code>&lt;mapper namespace=&quot;com.sitech.mapper.StudentMapper&quot;&gt;</code></p>
-</blockquote>
-<h5 id="命名空间要全"><a href="#命名空间要全" class="headerlink" title="命名空间要全"></a>命名空间要全</h5><h5 id="2-在mapper-xml文件中的resultType标签值要完整包名"><a href="#2-在mapper-xml文件中的resultType标签值要完整包名" class="headerlink" title="2. 在mapper.xml文件中的resultType标签值要完整包名"></a>2. 在mapper.xml文件中的resultType标签值要完整包名</h5><blockquote>
-<p><code>&lt;select id=&quot;checkmessage&quot; resultType=&quot;cn.cq.pojo.Student&quot;&gt;</code></p>
-</blockquote>
-<h5 id="3-在配置sqlsessionfactory的bean中交一个property标签"><a href="#3-在配置sqlsessionfactory的bean中交一个property标签" class="headerlink" title="3. 在配置sqlsessionfactory的bean中交一个property标签"></a>3. 在配置sqlsessionfactory的bean中交一个property标签</h5><blockquote>
-<p><code>&lt;property name=&quot;typeAliasesPackage&quot; value=&quot;cn.cq.pojo&quot;&gt;&lt;/property&gt;</code></p>
-</blockquote>
-<h5 id="这样就为pojo下所有的类配置了别名，即为类名"><a href="#这样就为pojo下所有的类配置了别名，即为类名" class="headerlink" title="这样就为pojo下所有的类配置了别名，即为类名"></a>这样就为pojo下所有的类配置了别名，即为类名</h5>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1661,7 +1683,7 @@ System.out.println(person.name);
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

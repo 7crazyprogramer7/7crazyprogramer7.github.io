@@ -249,6 +249,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/BeanCreationException/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/background.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="One Piece">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/28/BeanCreationException/" itemprop="url">mybatis与spring整合因别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationException问题解决</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T18:04:27+08:00">
+                2019-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="mybatis与spring整合是别名使用导致的classnotfound或org-springframework-beans-factory-BeanCreationException问题解决"><a href="#mybatis与spring整合是别名使用导致的classnotfound或org-springframework-beans-factory-BeanCreationException问题解决" class="headerlink" title="mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationException问题解决"></a>mybatis与spring整合是别名使用导致的classnotfound或org.springframework.beans.factory.BeanCreationException问题解决</h3><hr>
+<h5 id="1-命名空间没写对或不全，如果使用mapper，则"><a href="#1-命名空间没写对或不全，如果使用mapper，则" class="headerlink" title="1. 命名空间没写对或不全，如果使用mapper，则"></a>1. 命名空间没写对或不全，如果使用mapper，则</h5><blockquote>
+<p><code>&lt;mapper namespace=&quot;com.sitech.mapper.StudentMapper&quot;&gt;</code></p>
+</blockquote>
+<h5 id="命名空间要全"><a href="#命名空间要全" class="headerlink" title="命名空间要全"></a>命名空间要全</h5><h5 id="2-在mapper-xml文件中的resultType标签值要完整包名"><a href="#2-在mapper-xml文件中的resultType标签值要完整包名" class="headerlink" title="2. 在mapper.xml文件中的resultType标签值要完整包名"></a>2. 在mapper.xml文件中的resultType标签值要完整包名</h5><blockquote>
+<p><code>&lt;select id=&quot;checkmessage&quot; resultType=&quot;cn.cq.pojo.Student&quot;&gt;</code></p>
+</blockquote>
+<h5 id="3-在配置sqlsessionfactory的bean中交一个property标签"><a href="#3-在配置sqlsessionfactory的bean中交一个property标签" class="headerlink" title="3. 在配置sqlsessionfactory的bean中交一个property标签"></a>3. 在配置sqlsessionfactory的bean中交一个property标签</h5><blockquote>
+<p><code>&lt;property name=&quot;typeAliasesPackage&quot; value=&quot;cn.cq.pojo&quot;&gt;&lt;/property&gt;</code></p>
+</blockquote>
+<h5 id="这样就为pojo下所有的类配置了别名，即为类名"><a href="#这样就为pojo下所有的类配置了别名，即为类名" class="headerlink" title="这样就为pojo下所有的类配置了别名，即为类名"></a>这样就为pojo下所有的类配置了别名，即为类名</h5>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/mapperd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -831,7 +960,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

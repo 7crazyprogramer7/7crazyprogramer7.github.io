@@ -79,17 +79,25 @@
 
 
 
-<meta name="description" content="1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;         &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt">
+<meta name="description" content="1. 将模拟器准备好   2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同） 例如上图中，我为route0和route1之间配置的网段为172.16.10.0，而在route1和route2之间的网段为172.16.30.03. 各pc机，路由，及静态路由的配置命令如下： pc0    pc1    route0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="springmvc的四个组件">
-<meta property="og:url" content="http://yoursite.com/2019/03/10/springmvc/index.html">
+<meta property="og:title" content="cisco packet 的三个路由的配置方法及注意事项">
+<meta property="og:url" content="http://yoursite.com/2019/04/04/cisco-luyou/index.html">
 <meta property="og:site_name" content="One Piece">
-<meta property="og:description" content="1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;         &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt">
+<meta property="og:description" content="1. 将模拟器准备好   2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同） 例如上图中，我为route0和route1之间配置的网段为172.16.10.0，而在route1和route2之间的网段为172.16.30.03. 各pc机，路由，及静态路由的配置命令如下： pc0    pc1    route0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T04:02:20.830Z">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/moni.PNG">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/pc0.PNG">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/pc1.PNG">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/route0.PNG">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/route1.PNG">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/route2.PNG">
+<meta property="og:image" content="http://yoursite.com/cisco-luyou/suc.PNG">
+<meta property="og:updated_time" content="2019-04-03T17:08:15.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="springmvc的四个组件">
-<meta name="twitter:description" content="1 DispatcherServlet:前端控制器在web.xml中通过以下方式配置 &amp;lt;servlet&amp;gt;         &amp;lt;servlet-name&amp;gt;controller&amp;lt;/servlet-name&amp;gt;         &amp;lt;servlet-class&amp;gt;org.springframework.web.servlet.DispatcherServlet&amp;lt">
+<meta name="twitter:title" content="cisco packet 的三个路由的配置方法及注意事项">
+<meta name="twitter:description" content="1. 将模拟器准备好   2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同） 例如上图中，我为route0和route1之间配置的网段为172.16.10.0，而在route1和route2之间的网段为172.16.30.03. 各pc机，路由，及静态路由的配置命令如下： pc0    pc1    route0">
+<meta name="twitter:image" content="http://yoursite.com/cisco-luyou/moni.PNG">
 
 
 
@@ -119,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/10/springmvc/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/04/cisco-luyou/">
 
 
 
 
 
-  <title>springmvc的四个组件 | One Piece</title>
+  <title>cisco packet 的三个路由的配置方法及注意事项 | One Piece</title>
   
 
 
@@ -252,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/10/springmvc/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/cisco-luyou/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chen">
@@ -269,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">springmvc的四个组件</h1>
+          <h1 class="post-title" itemprop="name headline">cisco packet 的三个路由的配置方法及注意事项</h1>
         
 
         <div class="post-meta">
@@ -281,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T11:58:30+08:00">
-                2019-03-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-04T00:44:31+08:00">
+                2019-04-04
               </time>
             
 
@@ -319,44 +327,38 @@
       
 
       
-        <h4 id="1-DispatcherServlet-前端控制器"><a href="#1-DispatcherServlet-前端控制器" class="headerlink" title="1 DispatcherServlet:前端控制器"></a>1 DispatcherServlet:前端控制器</h4><h5 id="在web-xml中通过以下方式配置"><a href="#在web-xml中通过以下方式配置" class="headerlink" title="在web.xml中通过以下方式配置"></a>在web.xml中通过以下方式配置</h5><blockquote>
-<p><code>&lt;servlet&gt;
-        &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
-        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-        &lt;init-param&gt;
-            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-            &lt;param-value&gt;classpath:springmvc.xml&lt;/param-value&gt;
-        &lt;/init-param&gt;
-        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-    &lt;/servlet&gt; 
-    &lt;servlet-mapping&gt;
-    &lt;servlet-name&gt;controller&lt;/servlet-name&gt;
-    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
-    &lt;/servlet-mapping&gt;</code></p>
+        <h5 id="1-将模拟器准备好"><a href="#1-将模拟器准备好" class="headerlink" title="1. 将模拟器准备好"></a>1. 将模拟器准备好</h5><blockquote>
+<p><img src="/cisco-luyou/moni.PNG" alt="moniqi"></p>
 </blockquote>
-<h4 id="2-HandlerMapping-解析请求，判断要调用那个方法"><a href="#2-HandlerMapping-解析请求，判断要调用那个方法" class="headerlink" title="2 HandlerMapping:解析请求，判断要调用那个方法"></a>2 HandlerMapping:解析请求，判断要调用那个方法</h4><h5 id="在springmvc-xml下配置"><a href="#在springmvc-xml下配置" class="headerlink" title="在springmvc.xml下配置"></a>在springmvc.xml下配置</h5><blockquote>
-<p> <code>&lt;bean id=&quot;mappering&quot; class=&quot;org.springframework.web.servlet.handler.SimpleUrlHandlerMapping&quot;&gt;
-            &lt;property name=&quot;urlMap&quot;&gt;
-                &lt;map&gt;
-                    &lt;entry key=&quot;demo&quot; value-ref=&quot;democon&quot;&gt;&lt;/entry&gt;
-                &lt;/map&gt;
-            &lt;/property&gt;
-        &lt;/bean&gt;</code></p>
+<h5 id="2-为pc机配置IP-地址，掩码，为路由配置ip-还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）"><a href="#2-为pc机配置IP-地址，掩码，为路由配置ip-还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）" class="headerlink" title="2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）"></a>2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）</h5><ul>
+<li><h6 id="例如上图中，我为route0和route1之间配置的网段为172-16-10-0，而在route1和route2之间的网段为172-16-30-0"><a href="#例如上图中，我为route0和route1之间配置的网段为172-16-10-0，而在route1和route2之间的网段为172-16-30-0" class="headerlink" title="例如上图中，我为route0和route1之间配置的网段为172.16.10.0，而在route1和route2之间的网段为172.16.30.0"></a>例如上图中，我为route0和route1之间配置的网段为<font color="red">172.16.10.0</font>，而在route1和route2之间的网段为<font color="red">172.16.30.0</font></h6><h5 id="3-各pc机，路由，及静态路由的配置命令如下："><a href="#3-各pc机，路由，及静态路由的配置命令如下：" class="headerlink" title="3. 各pc机，路由，及静态路由的配置命令如下："></a>3. 各pc机，路由，及静态路由的配置命令如下：</h5></li>
+<li><h6 id="pc0"><a href="#pc0" class="headerlink" title="pc0"></a>pc0</h6><blockquote>
+<p><img src="/cisco-luyou/pc0.PNG" alt="pc0"></p>
 </blockquote>
-<h4 id="3-HandlerAdepter-调用方法"><a href="#3-HandlerAdepter-调用方法" class="headerlink" title="3 HandlerAdepter:调用方法"></a>3 HandlerAdepter:调用方法</h4><blockquote>
-<p> <code>&lt;bean id=&quot;adapter&quot; class=&quot;org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter&quot;&gt;&lt;/bean&gt;</code></p>
+</li>
+<li><h5 id="pc1"><a href="#pc1" class="headerlink" title="pc1"></a>pc1</h5><blockquote>
+<p><img src="/cisco-luyou/pc1.PNG" alt="pc1"></p>
 </blockquote>
-<h4 id="4-ViewResovler-视图解析器，跳转到页面"><a href="#4-ViewResovler-视图解析器，跳转到页面" class="headerlink" title="4 ViewResovler:视图解析器，跳转到页面"></a>4 ViewResovler:视图解析器，跳转到页面</h4><ul>
-<li><h5 id="可不配置，使用默认的"><a href="#可不配置，使用默认的" class="headerlink" title="可不配置，使用默认的"></a>可不配置，使用默认的</h5></li>
-<li><h5 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h5><blockquote>
-<p>`<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean></p>
-<pre><code>      &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/&quot;&gt;&lt;/property&gt;
-      &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
-  &lt;/bean&gt;`
-* 此处prefix的值为/WEB-INF/是因为jsp文件在WEB-INF下
-</code></pre></blockquote>
+</li>
+<li><h6 id="route0"><a href="#route0" class="headerlink" title="route0"></a>route0</h6><blockquote>
+<p><img src="/cisco-luyou/route0.PNG" alt="route0"></p>
+</blockquote>
+</li>
+<li><h6 id="route1"><a href="#route1" class="headerlink" title="route1"></a>route1</h6><blockquote>
+<p><img src="/cisco-luyou/route1.PNG" alt="route1"></p>
+</blockquote>
+</li>
+<li><h6 id="route2"><a href="#route2" class="headerlink" title="route2"></a>route2</h6><blockquote>
+<p><img src="/cisco-luyou/route2.PNG" alt="route2"></p>
+</blockquote>
+<h5 id="4-完成后如图："><a href="#4-完成后如图：" class="headerlink" title="4. 完成后如图："></a>4. 完成后如图：</h5><blockquote>
+<p><img src="/cisco-luyou/suc.PNG" alt="sucessfully"></p>
+</blockquote>
 </li>
 </ul>
+<h5 id="5-提供一条删除静态路由的命令-格式如下"><a href="#5-提供一条删除静态路由的命令-格式如下" class="headerlink" title="5. 提供一条删除静态路由的命令 (格式如下)"></a>5. 提供一条删除静态路由的命令 (格式如下)</h5><blockquote>
+<p><code>no ip route 192.168.100.0 255.255.255.0 172.168.10.4</code> </p>
+</blockquote>
 
       
     </div>
@@ -381,8 +383,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/07/Android-standard/" rel="next" title="Android standard">
-                <i class="fa fa-chevron-left"></i> Android standard
+              <a href="/2019/03/26/spsringMVC-view/" rel="next" title="springmvc中如何配置HTML的解析器">
+                <i class="fa fa-chevron-left"></i> springmvc中如何配置HTML的解析器
               </a>
             
           </div>
@@ -390,10 +392,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/12/session/" rel="prev" title="session">
-                session <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,7 +531,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-DispatcherServlet-前端控制器"><span class="nav-number">1.</span> <span class="nav-text">1 DispatcherServlet:前端控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在web-xml中通过以下方式配置"><span class="nav-number">1.1.</span> <span class="nav-text">在web.xml中通过以下方式配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-HandlerMapping-解析请求，判断要调用那个方法"><span class="nav-number">2.</span> <span class="nav-text">2 HandlerMapping:解析请求，判断要调用那个方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在springmvc-xml下配置"><span class="nav-number">2.1.</span> <span class="nav-text">在springmvc.xml下配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-HandlerAdepter-调用方法"><span class="nav-number">3.</span> <span class="nav-text">3 HandlerAdepter:调用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-ViewResovler-视图解析器，跳转到页面"><span class="nav-number">4.</span> <span class="nav-text">4 ViewResovler:视图解析器，跳转到页面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可不配置，使用默认的"><span class="nav-number">4.1.</span> <span class="nav-text">可不配置，使用默认的</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义"><span class="nav-number">4.2.</span> <span class="nav-text">自定义</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-将模拟器准备好"><span class="nav-number">1.</span> <span class="nav-text">1. 将模拟器准备好</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-为pc机配置IP-地址，掩码，为路由配置ip-还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）"><span class="nav-number">2.</span> <span class="nav-text">2. 为pc机配置IP 地址，掩码，为路由配置ip,还要配置静态路由（注意路由器之间的局域网络所属的网段应不同，但其子网掩码可以相同）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#例如上图中，我为route0和route1之间配置的网段为172-16-10-0，而在route1和route2之间的网段为172-16-30-0"><span class="nav-number">2.1.</span> <span class="nav-text">例如上图中，我为route0和route1之间配置的网段为172.16.10.0，而在route1和route2之间的网段为172.16.30.0</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-各pc机，路由，及静态路由的配置命令如下："><span class="nav-number">3.</span> <span class="nav-text">3. 各pc机，路由，及静态路由的配置命令如下：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#pc0"><span class="nav-number">3.1.</span> <span class="nav-text">pc0</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pc1"><span class="nav-number">4.</span> <span class="nav-text">pc1</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#route0"><span class="nav-number">4.1.</span> <span class="nav-text">route0</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#route1"><span class="nav-number">4.2.</span> <span class="nav-text">route1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#route2"><span class="nav-number">4.3.</span> <span class="nav-text">route2</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-完成后如图："><span class="nav-number">5.</span> <span class="nav-text">4. 完成后如图：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-提供一条删除静态路由的命令-格式如下"><span class="nav-number">6.</span> <span class="nav-text">5. 提供一条删除静态路由的命令 (格式如下)</span></a></li></ol></div>
             
 
           </div>
